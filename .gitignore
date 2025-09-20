@@ -1,0 +1,22 @@
+# ビルド生成物
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+
+# 一時ファイル
+*.log
+*.tmp
+*.swp
+
+# IDE関連
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS固有
+.DS_Store
+Thumbs.db
