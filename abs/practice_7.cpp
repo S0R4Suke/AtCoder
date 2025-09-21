@@ -36,7 +36,7 @@ void quick_sort(vector<int> &list, int first, int last) {
 }
 
 int main(){
-    int N, aliceScore = 0 , bobScore = 0;;
+    int N, aliceScore = 0 , bobScore = 0;
     cin >> N;
 
     vector<int> card(N);
