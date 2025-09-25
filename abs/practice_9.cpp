@@ -23,21 +23,19 @@ int main(){
     bool found = false;
 
     for(int x=0;x<=N;x++){
-        // 4000で割れないなら次
-        if((Y - 1000*N - 9000*x)%4000 != 0){
-            continue;
-        }
-
-        int y = (Y - 1000*N - 9000*x)/4000;
-
-        // yが負の数、またはN-xより大きい場合は次
-        if(y < 0 || y > N-x){
-            continue;
-        }
 
         // 9000x+4000y=Y-1000N
-        if(9000*x + 4000*y == Y - 1000*N){
-            cout << x << " " << y << " " << (N-x-y) << endl;
+        int expression = Y - 1000*N - 9000*x;
+
+        // yにする数が負の数、または4000で割れないなら次
+        if (expression < 0 || expression % 4000 != 0) continue;
+
+        int y = expression/4000;
+        int z = N - x - y;
+
+        // yが負の数、またはN-xより大きい場合は次
+        if (y >= 0 && z >= 0) {
+            cout << x << " " << y << " " << z << endl;
             found = true;
             break;
         }
